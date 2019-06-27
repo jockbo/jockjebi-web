@@ -12,8 +12,8 @@ export default new Vuex.Store({
         jwt: localStorage.getItem('t'),
 
         endpoints: {
-            obtainJWT: 'http://127.0.0.1:8000/token',
-            refreshJWT: 'http://127.0.0.1:8000/refresh'
+            obtainJWT: '/token',
+            refreshJWT: '/refresh'
         },
 
         username: '로그인', 
@@ -75,7 +75,7 @@ export default new Vuex.Store({
         findUserUni() {
             axios({
                 method: 'get',
-                url: 'http://127.0.0.1:8000/api/getuseruni', 
+                url: '/api/getuseruni', 
                 headers: {
                     authorization: this.state.jwt,
                 },
