@@ -17,20 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework_jwt.views import obtain_jwt_token, refresh_jwt_token
-<<<<<<< HEAD
-from django.views.generic import TemplateView 
-=======
 from django.views.generic.base import TemplateView
->>>>>>> f0ae8c0b79803a734584451a2ee6c3dfb73404d9
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('token', obtain_jwt_token),
-<<<<<<< HEAD
-    path('token/refresh/', refresh_jwt_token),
-=======
     path('token/refresh/', refresh_jwt_token),  
->>>>>>> f0ae8c0b79803a734584451a2ee6c3dfb73404d9
     path('', TemplateView.as_view(template_name='index.html'))
 ]
